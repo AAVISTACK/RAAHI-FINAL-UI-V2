@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  REQUIRED ONE-TIME SETUP — this file is currently a placeholder, not real certificate data.
+
+  Theme.kt loads Space Grotesk + Plus Jakarta Sans via the Google Fonts Downloadable Fonts
+  API (androidx.compose.ui.text.googlefonts.GoogleFont), which needs this array to contain
+  Play Services' Fonts-provider signing certificate hashes. Those are long, exact base64
+  blobs — getting even one character wrong makes cert verification silently fail (font
+  requests just fall back to the system default, nothing crashes), so rather than retype
+  them from memory and risk a subtle transcription error, generate this file correctly with
+  Android Studio's built-in wizard instead:
+
+    res (right-click) → New → Font Resource File → pick any font → the wizard downloads/
+    creates this exact array for you automatically → replace this file with the generated one
+    (or just let the wizard overwrite it).
+
+  Until this is done, GoogleFont lookups fail gracefully and RaahiTheme falls back to
+  FontFamily.Default (system sans-serif) — the app still builds and runs fine, it just won't
+  have the Space Grotesk / Plus Jakarta Sans look until this one-time step is done.
+-->
+<resources>
+    <array name="com_google_android_gms_fonts_certs">
+    </array>
+</resources>

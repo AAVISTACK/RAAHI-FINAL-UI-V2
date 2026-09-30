@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Kept identical to RaahiNavyBackground / RaahiOrangeAccent in
+         ui/theme/Theme.kt — these XML resources are only used for the window's
+         pre-Compose theme (window background, status/nav bar color), not for
+         any actual UI, which is 100% Jetpack Compose. -->
+    <color name="raahi_navy_background">#FF0D1623</color>
+    <color name="raahi_orange_accent">#FFFF6B00</color>
+    <!-- Near-black of the Raahi splash artwork. Only used for the pre-Compose starting window
+         (Theme.Raahi.Splash) so there is no white/navy flash before the Compose splash draws. -->
+    <color name="raahi_splash_background">#FF020407</color>
+</resources>
+

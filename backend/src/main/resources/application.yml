@@ -1,0 +1,47 @@
+spring:
+  application:
+    name: raahi-backend
+
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/raahi}
+    username: ${DB_USER:raahi}
+    password: ${DB_PASSWORD:}
+
+  jpa:
+    hibernate:
+      ddl-auto: validate      # schema is owned by Flyway, never by Hibernate auto-DDL
+    properties:
+      hibernate:
+        format_sql: false
+    open-in-view: false
+
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+
+  data:
+    redis:
+      host: ${REDIS_HOST:localhost}
+      port: ${REDIS_PORT:6379}
+      password: ${REDIS_PASSWORD:}
+
+server:
+  port: ${PORT:8080}
+
+raahi:
+  jwt:
+    secret: ${JWT_SECRET:}          # MUST be set via env var in every environment, no fallback in prod
+    expiry-days: ${JWT_EXPIRY_DAYS:30}
+  firebase:
+    credentials-path: ${FIREBASE_CREDENTIALS_PATH:}   # path to service account json, never committed
+  ai:
+    provider: ${AI_PROVIDER:gemini}
+    gemini-api-key: ${GEMINI_API_KEY:}   # backend-only, never sent to Android
+  shop:
+    amazon-affiliate-tag: ${AMAZON_AFFILIATE_TAG:}   # optional; links work without it, just unattributed
+  payment:
+    razorpay-key-id: ${RAZORPAY_KEY_ID:}             # unset = Subscription checkout is honestly reported as unavailable
+
+logging:
+  level:
+    in.raahi.backend: INFO

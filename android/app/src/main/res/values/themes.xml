@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- This is only the pre-Compose window theme (window background, status/nav bar color
+         before setContent{} runs) — all actual UI colors/typography come from RaahiTheme in
+         ui/theme/Theme.kt. Parent is a platform-only theme (no com.google.android.material
+         dependency needed) since this app has no XML layouts or Material Components views. -->
+    <style name="Theme.Raahi" parent="android:Theme.Material.NoActionBar">
+        <item name="android:windowBackground">@color/raahi_navy_background</item>
+        <item name="android:statusBarColor">@color/raahi_navy_background</item>
+        <item name="android:navigationBarColor">@color/raahi_navy_background</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:colorAccent">@color/raahi_orange_accent</item>
+    </style>
+
+    <!-- Theme of the *starting window only*. MainActivity switches back to Theme.Raahi in
+         onCreate() before the window is created, so the rest of the app is visually unchanged.
+         Its only job is to paint the splash's near-black instead of a white/navy frame. -->
+    <style name="Theme.Raahi.Splash" parent="Theme.Raahi">
+        <item name="android:windowBackground">@color/raahi_splash_background</item>
+        <item name="android:statusBarColor">@color/raahi_splash_background</item>
+        <item name="android:navigationBarColor">@color/raahi_splash_background</item>
+    </style>
+</resources>

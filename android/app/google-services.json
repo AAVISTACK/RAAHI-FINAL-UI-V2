@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "107641072718",
+    "project_id": "raahi-6f418",
+    "storage_bucket": "raahi-6f418.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:107641072718:android:ff4d70f55d55f0e055a71f",
+        "android_client_info": {
+          "package_name": "com.raahi.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "107641072718-sngrdnjrk8gltcaddinatrtr4ggr55mv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC0hmuQibdcPsQStTyofhhHw86HWs4ZD7k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "107641072718-sngrdnjrk8gltcaddinatrtr4ggr55mv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Android 12+ draws a system splash (background + centered icon) before our first frame.
+         Same near-black background and NO icon, so the only logo the user ever sees is the
+         Compose splash. Platform attributes only — no androidx.core:core-splashscreen needed. -->
+    <style name="Theme.Raahi.Splash" parent="Theme.Raahi">
+        <item name="android:windowBackground">@color/raahi_splash_background</item>
+        <item name="android:statusBarColor">@color/raahi_splash_background</item>
+        <item name="android:navigationBarColor">@color/raahi_splash_background</item>
+        <item name="android:windowSplashScreenBackground">@color/raahi_splash_background</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@android:color/transparent</item>
+    </style>
+</resources>
